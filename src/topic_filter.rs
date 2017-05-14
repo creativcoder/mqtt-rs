@@ -13,7 +13,7 @@ use encodable::StringEncodeError;
 const VALIDATE_TOPIC_FILTER_REGEX: &'static str =
     r"^(#|((\+|\$?[^/\$\+#]+)?(/(\+|[^/\$\+#]+))*?(/(\+|#|[^/\$\+#]+))?))$";
 
-#[derive(Debug, Eq, PartialEq, Clone)]
+#[derive(Debug, Eq, PartialEq, Clone, Serialize, Deserialize)]
 pub struct TopicFilter(String);
 
 impl TopicFilter {

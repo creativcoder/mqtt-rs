@@ -2,6 +2,9 @@
 extern crate log;
 extern crate byteorder;
 extern crate regex;
+extern crate serde;
+#[macro_use]
+extern crate serde_derive;
 
 pub use self::encodable::{Encodable, Decodable};
 pub use self::qos::QualityOfService;
